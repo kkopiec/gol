@@ -14,6 +14,7 @@ public:
   void setFlipped(bool);
   bool getFlipped() const;
   void addNeighbour(Cell*);
+  void markFlip();
   void flip();
   friend std::ostream &  operator<<(std::ostream &os, const Cell &c);
   Cell();

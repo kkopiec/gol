@@ -27,17 +27,23 @@ void Cell::addNeighbour(Cell *c){
   }
 }
 void Cell::flip() {
-  std::vector<const Cell*>::iterator it;
-  int alives = 0;
+
   if (flipped){
     alive =!alive;
     flipped = false;
   }
+}
+
+void Cell::markFlip() {
+  std::vector<const Cell*>::iterator it;
+  int alives = 0;
   for(it = neighbours.begin(); it < neighbours.end(); it++){
     if ((*it)->getAlive()) alives++;
   }
+
   switch(alives){
   case 2:
+    flipped = false;
     break;
   case 3:
     if(!alive)
