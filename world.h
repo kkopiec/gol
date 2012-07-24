@@ -1,7 +1,7 @@
 #ifndef WORLD_H
 #define WORLD_H
-#include"cell.h"
-#include<iostream>
+#include "cell.h"
+#include <iostream>
 
 class World {
 public:
@@ -12,9 +12,9 @@ public:
   void flipOver(int,int);
   friend std::ostream & operator<<(std::ostream &os, const World &w);
 protected:
-  int boardSize;
+  int boardsize, bw,bh;
   long long turns;
-  Cell* board;
-}
+  Cell** board;
+};
 
 #endif

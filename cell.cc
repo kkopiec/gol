@@ -1,5 +1,6 @@
 #include "cell.h"
-#include<algorithm>
+#include <algorithm>
+#include <string> 
 Cell::Cell(){
   alive=false;
   flipped=false;
@@ -61,8 +62,10 @@ bool Cell::knowsAbout(const Cell *c) const {
 }
 
 std::ostream &  operator<<(std::ostream &os, const Cell &c){
-  os << "Alive: " << c.alive << "\tFlipped: " << c.flipped 
-     << "\tNeighbours: " << c.neighbours.size();
+  //  os << "Alive: " << c.alive << "\tFlipped: " << c.flipped 
+  // << "\tNeighbours: " << c.neighbours.size();
+  std::string ch (c.alive?"#":" ");
+  os<<ch;
   return os;
 }
 
