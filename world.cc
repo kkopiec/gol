@@ -42,9 +42,12 @@ World::World(int w, int h){
 }
 World::~World(){
 
+
   for (int i = 0 ;i < boardsize; i++){
     delete(board[i]);
   }
+
+  delete[](board);
 }
 void World::clear(){
   for (int i = 0 ;i < boardsize; i++){

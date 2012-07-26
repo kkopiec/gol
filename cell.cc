@@ -7,7 +7,13 @@ Cell::Cell(){
 }
 
 Cell::~Cell(){
+  /*
+  std::vector<const Cell*>::iterator it;
+  for(it = neighbours.begin(); it < neighbours.end();it++){
+    *it = NULL;
+  }
   delete(&neighbours);
+  */
 }
 void Cell::setAlive(bool t){
   alive = t;

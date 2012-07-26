@@ -10,5 +10,6 @@ int main(int argc, char *argv[]){
     w->evaluate();
     std::cout << *w;
   }
+  delete(w);
   return 0;
 }
